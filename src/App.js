@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import ProfilePic from './components/ProfilePic';
+import TrashCan from './components/TrashCan';
+import SearchTool from './components/SearchTool';
+import NotesList from './components/NotesList';
+import AddNewNote from './components/AddNewNote';
+const App = () =>{
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="notes">
+      <div className="notes_tab">
+        <div className="notes_tab_header">
+          <ProfilePic/>
+          <span className="header_title">My Notes</span>
+          <TrashCan/>
+        </div>
+        <SearchTool/>
+        <NotesList/>
+      </div>
+      <div className="notes_edit">
+        <AddNewNote/>
+        <div class="text">
+          <textarea id="txt" class="notes_body"></textarea>
+        </div>
+      </div>
     </div>
+
   );
-}
+};
 
 export default App;
