@@ -16,7 +16,8 @@ const Sidebar = ({ notes, handleDelete, activeNote, setActiveNote }) => {
 
   return (
     <div className="notes_tab">
-        <div className="notes_tab_header">
+      <div className="wrapper">
+      <div className="notes_tab_header">
           <span className="profile_pic">
             <img className="picture" src={picture} alt=""></img>
           </span>
@@ -43,6 +44,9 @@ const Sidebar = ({ notes, handleDelete, activeNote, setActiveNote }) => {
           ))}
           
         </div>
+
+      </div>
+        
 
       </div>
 
