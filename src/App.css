@@ -31,7 +31,7 @@ background: var(--background-color);
 }
 
 .notes_tab{
-width: 500px;
+width: auto;
 padding: 0px;
 font-family: Arial, Helvetica, sans-serif;
 overflow-y: auto;
@@ -116,6 +116,14 @@ align-items: center;
 
 }
 
+.back_img{
+  margin-left: 5px;
+  border: none;
+  outline: none;
+  background: none;
+  display: none;
+}
+
 #add_new_note_img{
 margin-right: 10px;
 border: none;
@@ -155,7 +163,19 @@ textarea:focus, input:focus {
 
 /* These rules only apply if the window's max-width is 500px or less */
 @media all and (max-width: 500px) {
-.logo {
-  display: none;
-}
+
+
+  .back_img{
+    display: block;
+  }
+  .add_new_note{
+    justify-content: space-between;
+  }
+  .wrapper {
+    visibility: hidden;
+    width: 0px;
+    height: 0px;
+  }
+ 
+  
 }
