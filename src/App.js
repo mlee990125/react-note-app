@@ -3,7 +3,7 @@ import Main from './Main';
 import './App.css'
 import { useState } from 'react';
 import { nanoid } from 'nanoid';
-
+//change
 function App() {
   const [notes, setNotes] = useState([]);
   const [activeNote, setActiveNote] = useState(false);
