@@ -19,14 +19,14 @@ const Main = ( { handleAddNote, activeNote, onEditNote}) => {
  }
 
   return (
-    <div class="notes_edit">
-        <div class="add_new_note">
+    <div className="notes_edit">
+        <div className="add_new_note">
           <button id="add_new_note_img" onClick={handleAddNote}>
             <img src={addNoteImg} alt=""></img>
           </button>
         </div>
-        <div class="text">
-          <textarea id="txt" class="notes_body" onChange={(e) => onEdit(e.target.value, activeNote)} value={noteSelected(activeNote)}></textarea>
+        <div className="text">
+          <textarea id="txt" className="notes_body" onChange={(e) => onEdit(e.target.value, activeNote)} value={noteSelected(activeNote)}></textarea>
         </div>
       </div>
 
