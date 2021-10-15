@@ -56,6 +56,7 @@ function App() {
   }, [notes]);
 
   return (
+   
     <div className="notes">
       <Sidebar 
       notes={notes} 
@@ -69,6 +70,8 @@ function App() {
       onEditNote={onEditNote}
       />
     </div>
+  
+    
     
   );
 }
