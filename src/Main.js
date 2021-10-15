@@ -1,5 +1,9 @@
 import addNoteImg from './baseline_note_add_black_24dp.png'
+import backImg from './baseline_arrow_back_black_24dp.png'
 const Main = ( { handleAddNote, activeNote, onEditNote}) => {
+
+  
+
   const onEdit = (text, activeNote) => {
     if(!activeNote) return;
     onEditNote({
@@ -21,6 +25,9 @@ const Main = ( { handleAddNote, activeNote, onEditNote}) => {
   return (
     <div className="notes_edit">
         <div className="add_new_note">
+          <button className="back_img" onClick={() => console.log("clicked!")}>
+            <img src={backImg} alt=""></img>
+          </button>
           <button id="add_new_note_img" onClick={handleAddNote}>
             <img src={addNoteImg} alt=""></img>
           </button>
