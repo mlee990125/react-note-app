@@ -15,30 +15,30 @@ const Sidebar = ({ notes, handleDelete, activeNote, setActiveNote }) => {
 
 
   return (
-    <div class="notes_tab">
-        <div class="notes_tab_header">
-          <span class="profile_pic">
-            <img class="picture" src={picture} alt=""></img>
+    <div className="notes_tab">
+        <div className="notes_tab_header">
+          <span className="profile_pic">
+            <img className="picture" src={picture} alt=""></img>
           </span>
-          <span class="header_title">My Notes</span>
-          <span class="trash_can" onClick={() => handleDelete(activeNote)}>
-            <img class="trash_can_img" src={trashCanImg} alt=""></img>
+          <span className="header_title">My Notes</span>
+          <span className="trash_can" onClick={() => handleDelete(activeNote)}>
+            <img className="trash_can_img" src={trashCanImg} alt=""></img>
           </span>
         </div>
-        <div class="search_tool">
-          <img class="search_tool_img" src={searchToolImg} alt=""></img>
-          <div class="search_box">
-            <input class="search_engine" type="text" placeholder="Search all notes"></input>
+        <div className="search_tool">
+          <img className="search_tool_img" src={searchToolImg} alt=""></img>
+          <div className="search_box">
+            <input className="search_engine" type="text" placeholder="Search all notes"></input>
           </div>
         </div>
-        <div class="notes_list">
+        <div className="notes_list">
           {notes.map((note) => (
             <div 
-            class={`notes_list_item ${note.id === activeNote && "notes_list_item_selected"}`} 
+            className={`notes_list_item ${note.id === activeNote && "notes_list_item_selected"}`} 
             onClick={() => setActiveNote(note.id)}
             >
-            <div class="notes_title">{lengthCheck(note.text)}</div>
-            <div class="notes_date">{new Date(note.lastModified).toLocaleDateString()}</div>
+            <div className="notes_title">{lengthCheck(note.text)}</div>
+            <div className="notes_date">{new Date(note.lastModified).toLocaleDateString()}</div>
           </div>
           ))}
           
