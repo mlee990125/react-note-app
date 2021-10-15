@@ -1,7 +1,7 @@
 import Sidebar from './Sidebar';
 import Main from './Main';
 import './App.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { nanoid } from 'nanoid';
 //change
 function App() {
@@ -40,6 +40,20 @@ function App() {
     });
     setNotes(updatedNotesArray);
   };
+
+  useEffect(()=> {
+    const savedNotes = JSON.parse(localStorage.getItem('react-notes-app-data'));
+    if(savedNotes){
+      setNotes(savedNotes);
+    }
+  }, []);
+
+  useEffect(()=> {
+    localStorage.setItem(
+      'react-notes-app-data',
+      JSON.stringify(notes)
+    );
+  }, [notes]);
 
   return (
     <div className="notes">
